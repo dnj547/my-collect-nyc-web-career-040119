@@ -1,8 +1,12 @@
 def my_collect(array)
-  i = 0
-  while i < array.length
-    yield(array[i]) if block_given?
-    i+=1
+  if block_given?
+    i = 0
+    while i < array.length
+      yield(array[i])
+      i+=1
+    end
+    array
+  else
+    "Try again"
   end
-  array
 end
