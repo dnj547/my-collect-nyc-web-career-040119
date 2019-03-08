@@ -1,4 +1,4 @@
-def my_collect(array)
+def my_collect(array, block)
   i = 0
   while i < array.length
     yield(array[i], block) if block_given?
